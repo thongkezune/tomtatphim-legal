@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tom Tat Phim – Connecting TikTok</title>
+<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:60px auto;padding:0 16px;color:#222;text-align:center}</style>
+</head>
+<body>
+<h1>Tom Tat Phim</h1>
+<p id="msg">Finishing TikTok sign-in…</p>
+<script>
+  // Hand the authorization result back to the Tom Tat Phim publisher running on this computer.
+  var q = window.location.search;
+  if (q) {
+    window.location.replace("http://127.0.0.1:8765/callback" + q);
+  } else {
+    document.getElementById("msg").textContent = "Nothing to do here.";
+  }
+</script>
+</body>
+</html>
